@@ -1,3 +1,5 @@
+import labCleanroom from '../assets/lab-cleanroom.jpeg';
+
 const points = [
   {
     title: 'Molecules, engineered with intent.',
@@ -48,10 +50,12 @@ export default function About() {
           ))}
         </div>
         <aside className="lab-card">
-          <div className="lab-photo" aria-hidden="true"></div>
+          <div className="lab-photo">
+            <img src={labCleanroom} alt="Scientist handling a petri dish in a laboratory" />
+          </div>
           <div className="location-card">
             <span>Located At</span>
-            <strong>Hyderabad - Opposite T-HUB</strong>
+            <strong>Hitech City, Hyderabad — Opposite T-HUB</strong>
           </div>
         </aside>
       </div>

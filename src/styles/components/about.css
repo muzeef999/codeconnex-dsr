@@ -20,9 +20,9 @@
   color: var(--blue);
   font-size: clamp(30px, 2.6vw, 48px);
   line-height: 1;
-  font-family: Impact, "Arial Black", "Inter", Arial, sans-serif;
+  font-family: "Arial Black", "Inter", Arial, sans-serif;
   font-weight: 900;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.035em;
   white-space: nowrap;
 }
 
@@ -54,13 +54,13 @@
 .about-intro h2 {
   max-width: 920px;
   font-size: clamp(48px, 4.2vw, 76px);
-  letter-spacing: -0.065em;
+  letter-spacing: -0.04em;
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(420px, 0.82fr);
-  gap: 60px;
+  grid-template-columns: minmax(0, 1.18fr) minmax(430px, 0.82fr);
+  gap: clamp(56px, 3.8vw, 72px);
   align-items: start;
   padding-bottom: var(--section-y);
 }
@@ -68,8 +68,8 @@
 .about-point {
   display: grid;
   grid-template-columns: 74px 1fr;
-  gap: 24px;
-  padding: 40px 0 48px;
+  gap: 30px;
+  padding: 44px 0 60px;
   border-top: 1px solid var(--line);
 }
 
@@ -82,16 +82,19 @@
 
 .about-point h3 {
   margin: 0 0 16px;
-  font-size: clamp(28px, 2.5vw, 40px);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  font-size: clamp(28px, 2.2vw, 36px);
   line-height: 1.12;
-  font-weight: 920;
+  font-weight: 900;
+  letter-spacing: -0.045em;
 }
 
 .about-point p {
-  max-width: 760px;
+  max-width: 750px;
   margin: 0;
   color: var(--muted);
-  font-size: 20px;
+  font-size: clamp(18px, 1.18vw, 21px);
+  line-height: 1.6;
 }
 
 .lab-card {
@@ -100,20 +103,50 @@
 }
 
 .lab-photo {
-  height: 650px;
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.1)),
-    radial-gradient(circle at 66% 56%, rgba(255, 255, 255, 0.96) 0 7%, transparent 8%),
-    radial-gradient(circle at 52% 64%, rgba(30, 30, 30, 0.16) 0 16%, transparent 17%),
-    linear-gradient(135deg, #f4f4f4, #b9bdc3 46%, #eeeeee);
-  filter: grayscale(1);
+  position: relative;
+  height: clamp(500px, 33.8vw, 650px);
+  overflow: hidden;
+  background: #e8e8e8;
+}
+
+.lab-photo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  pointer-events: none;
+}
+
+.lab-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 52% 50%;
+  filter: grayscale(1) contrast(1.08) brightness(1.06);
 }
 
 .location-card {
   margin-top: 30px;
-  padding: 42px;
+  position: relative;
+  padding: 42px 46px;
   background: var(--blue);
   color: #fff;
+}
+
+.location-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 46px;
+  height: 46px;
+  background: #fff;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
 }
 
 .location-card span {
@@ -127,7 +160,9 @@
 }
 
 .location-card strong {
-  font-size: 28px;
+  display: block;
+  font-size: clamp(22px, 1.45vw, 28px);
+  line-height: 1.2;
 }
 
 @media (max-width: 1000px) {
@@ -162,7 +197,7 @@
     height: 390px;
   }
 
-  .marquee div {
+  .marquee-group {
     gap: 28px;
     font-size: 32px;
   }

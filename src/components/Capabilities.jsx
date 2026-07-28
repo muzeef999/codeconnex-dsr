@@ -1,3 +1,5 @@
+import scaleupTanks from '../assets/scaleup-tanks.jpeg';
+
 const capabilities = [
   ['25+', 'Years of synthetic expertise'],
   ['500+', 'Fine chemical compounds'],
@@ -39,8 +41,9 @@ export default function Capabilities() {
             </div>
           </div>
 
-          <aside className="capabilities-image" aria-label="Research to several hundred kilos">
-            <div>
+          <aside className="capabilities-image">
+            <img src={scaleupTanks} alt="Industrial scale-up tanks at a manufacturing facility" />
+            <div className="capabilities-image-caption">
               <span>Process R&D & Scale-Up</span>
               <strong>Research to several hundred kilos.</strong>
             </div>

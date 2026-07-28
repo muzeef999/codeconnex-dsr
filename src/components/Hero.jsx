@@ -1,3 +1,5 @@
+import heroMolecule from '../assets/hero-molecule.jpeg';
+
 export default function Hero() {
   return (
     <section id="top" className="hero">
@@ -19,9 +21,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="hero-art" aria-hidden="true">
-        <div className="molecule molecule-one"></div>
-        <div className="molecule molecule-two"></div>
-        <div className="molecule molecule-three"></div>
+        <img src={heroMolecule} alt="" />
       </div>
     </section>
   );

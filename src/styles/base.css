@@ -78,11 +78,11 @@ a {
   margin: 0;
   max-width: 980px;
   color: inherit;
-  font-family: Impact, "Arial Black", "Inter", "Segoe UI", Arial, sans-serif;
+  font-family: "Arial Black", "Inter", "Segoe UI", Arial, sans-serif;
   font-size: clamp(56px, 6.25vw, 116px);
   line-height: 0.98;
   font-weight: 900;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.035em;
 }
 
 .btn {
