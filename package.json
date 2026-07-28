@@ -1,0 +1,14 @@
+{
+  "name": "dsr-pharmachem-static",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Clean static package of the supplied DSR Pharmachem website mirror.",
+  "scripts": {
+    "start": "serve . -l 3000",
+    "preview": "serve . -l 3000",
+    "check": "node scripts/check-project.mjs"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
