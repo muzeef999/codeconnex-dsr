@@ -2,7 +2,8 @@
   color-scheme: light;
   --container: 1670px;
   --gutter: clamp(24px, 6.2vw, 120px);
-  --section-y: clamp(80px, 7vw, 132px);
+  --section-y: clamp(76px, 6.4vw, 124px);
+  --display-font: "Arial Black", "Inter", "Segoe UI", Arial, sans-serif;
   --ink: #07101f;
   --muted: #667085;
   --navy: #071429;
@@ -20,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -27,9 +29,10 @@ body {
   font-family: "Inter", "Segoe UI", Arial, sans-serif;
   background: var(--paper);
   color: var(--ink);
-  line-height: 1.6;
+  line-height: 1.55;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 a {
@@ -51,11 +54,12 @@ a {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin: 0 0 44px;
+  margin: 0 0 34px;
   color: var(--cyan);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 8px;
+  line-height: 1.2;
+  letter-spacing: 0.48em;
   text-transform: uppercase;
 }
 
@@ -78,11 +82,11 @@ a {
   margin: 0;
   max-width: 980px;
   color: inherit;
-  font-family: "Arial Black", "Inter", "Segoe UI", Arial, sans-serif;
-  font-size: clamp(56px, 6.25vw, 116px);
+  font-family: var(--display-font);
+  font-size: clamp(52px, 5.85vw, 108px);
   line-height: 0.98;
   font-weight: 900;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.045em;
 }
 
 .btn {
@@ -91,9 +95,9 @@ a {
   justify-content: center;
   gap: 12px;
   min-height: 56px;
-  padding: 0 34px;
+  padding: 0 32px;
   border: 1px solid transparent;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 850;
   letter-spacing: 0;
   cursor: pointer;
@@ -124,6 +128,11 @@ a {
 }
 
 @media (max-width: 680px) {
+  :root {
+    --gutter: 20px;
+    --section-y: 72px;
+  }
+
   .section-inner {
     width: min(var(--container), calc(100% - 32px));
   }
@@ -143,5 +152,32 @@ a {
 
   .eyebrow span {
     width: 38px;
+  }
+
+  .hero h1,
+  .about-intro h2,
+  .products-heading h2,
+  .capabilities-copy h2,
+  .services-grid h2,
+  .contact-copy h2 {
+    font-size: clamp(38px, 11.4vw, 56px);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+  }
+}
+
+@media (min-width: 681px) and (max-width: 1200px) {
+  :root {
+    --gutter: clamp(28px, 5vw, 64px);
+    --section-y: 88px;
+  }
+
+  .hero h1,
+  .about-intro h2,
+  .products-heading h2,
+  .capabilities-copy h2,
+  .services-grid h2,
+  .contact-copy h2 {
+    letter-spacing: -0.04em;
   }
 }

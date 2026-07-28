@@ -20,26 +20,27 @@
   z-index: 2;
   display: grid;
   grid-template-columns: minmax(360px, 0.72fr) minmax(0, 1.28fr);
-  gap: 70px;
+  gap: clamp(48px, 4vw, 68px);
 }
 
 .services-grid h2 {
   max-width: 600px;
-  font-size: clamp(40px, 3.65vw, 60px);
+  font-size: clamp(38px, 3.35vw, 58px);
 }
 
 .services-grid > div:first-child > p:last-child {
   max-width: 520px;
   margin-top: 30px;
   color: rgba(255, 255, 255, 0.72);
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .service-accordion article {
   display: grid;
   grid-template-columns: 52px minmax(0, 1fr) 34px;
   gap: 24px;
-  padding: 34px 0 40px;
+  padding: 32px 0 38px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 
@@ -50,15 +51,15 @@
 
 .service-accordion h3 {
   margin: 0;
-  font-size: clamp(28px, 2.3vw, 40px);
+  font-size: clamp(27px, 2.1vw, 38px);
   line-height: 1.1;
 }
 
 .service-accordion p {
   max-width: 850px;
-  margin: 42px 0 0;
+  margin: 34px 0 0;
   color: rgba(255, 255, 255, 0.75);
-  font-size: 21px;
+  font-size: 19px;
 }
 
 .service-accordion button {
@@ -75,8 +76,8 @@
 
 @media (max-width: 1000px) {
   .services-section {
-    padding-top: 96px;
-    padding-bottom: 96px;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   .services-grid {
@@ -85,9 +86,16 @@
 }
 
 @media (max-width: 680px) {
+  .services-grid > div:first-child > p:last-child,
+  .service-accordion p {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
   .service-accordion article {
     grid-template-columns: 1fr;
     gap: 16px;
+    padding: 28px 0 32px;
   }
 
   .service-accordion button {

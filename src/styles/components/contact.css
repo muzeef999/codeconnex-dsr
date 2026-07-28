@@ -1,5 +1,5 @@
 .contact-section {
-  padding: clamp(58px, 5vw, 84px) 0 0;
+  padding: clamp(70px, 5.8vw, 100px) 0 0;
   background: #f8fafc;
   color: var(--ink);
 }
@@ -7,30 +7,31 @@
 .contact-grid {
   display: grid;
   grid-template-columns: minmax(420px, 0.78fr) minmax(560px, 1.22fr);
-  gap: 76px;
+  gap: clamp(54px, 4.2vw, 76px);
   align-items: start;
   min-height: 720px;
 }
 
 .contact-copy {
-  padding-top: 48px;
+  padding-top: 34px;
 }
 
 .contact-copy h2 {
   max-width: 600px;
-  font-size: clamp(44px, 4.15vw, 72px);
+  font-size: clamp(42px, 3.85vw, 68px);
 }
 
 .contact-copy > p {
   max-width: 620px;
-  margin: 38px 0 64px;
+  margin: 34px 0 56px;
   color: var(--muted);
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .contact-methods {
   display: grid;
-  gap: 34px;
+  gap: 30px;
 }
 
 .contact-methods a,
@@ -62,7 +63,7 @@
 .contact-methods strong {
   display: block;
   color: var(--ink);
-  font-size: 21px;
+  font-size: 19px;
   line-height: 1.55;
 }
 
@@ -73,8 +74,8 @@
 .contact-form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 36px 30px;
-  padding: 58px 50px 62px;
+  gap: 30px 28px;
+  padding: 50px 46px 56px;
   border: 1px solid #d7dfec;
   background: #fff;
 }
@@ -103,7 +104,7 @@
   background: #fff;
   color: #3e4860;
   font: inherit;
-  font-size: 18px;
+  font-size: 16px;
   outline: none;
   transition: border-color 0.18s ease, box-shadow 0.18s ease;
 }
@@ -131,8 +132,8 @@
 
 @media (max-width: 1000px) {
   .contact-section {
-    padding-top: 96px;
-    padding-bottom: 96px;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   .contact-grid {
@@ -150,10 +151,28 @@
   }
 }
 
+@media (min-width: 1001px) and (max-width: 1200px) {
+  .contact-grid {
+    grid-template-columns: minmax(0, 0.85fr) minmax(460px, 1.15fr);
+    gap: 44px;
+  }
+
+  .contact-form {
+    padding: 42px 36px 46px;
+  }
+}
+
 @media (max-width: 680px) {
+  .contact-copy > p {
+    margin: 28px 0 42px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
   .contact-form {
     grid-template-columns: 1fr;
-    padding: 30px 22px;
+    padding: 28px 20px;
+    gap: 24px;
   }
 
   .contact-methods a,
@@ -164,5 +183,14 @@
   .contact-methods span {
     width: 48px;
     height: 48px;
+  }
+
+  .contact-methods strong {
+    font-size: 16px;
+    word-break: break-word;
+  }
+
+  .contact-form button {
+    width: 100%;
   }
 }

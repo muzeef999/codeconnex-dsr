@@ -4,8 +4,8 @@ export default function Hero() {
   return (
     <section id="top" className="hero">
       <div className="hero-copy">
-        <p className="eyebrow">
-          <span></span> Organic Fine Chemicals - Hyderabad
+        <p className="eyebrow hero-eyebrow">
+          <span></span> Organic Fine Chemicals · Hyderabad
         </p>
         <h1>Fine chemistry,<br />built for<br /><em>discovery.</em></h1>
         <p className="hero-text">
