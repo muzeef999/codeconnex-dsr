@@ -1,0 +1,96 @@
+.services-section {
+  position: relative;
+  padding: var(--section-y) 0;
+  background: var(--navy);
+  color: #fff;
+}
+
+.services-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.18) 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+.services-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(360px, 0.72fr) minmax(0, 1.28fr);
+  gap: 70px;
+}
+
+.services-grid h2 {
+  max-width: 600px;
+  font-size: clamp(40px, 3.65vw, 60px);
+}
+
+.services-grid > div:first-child > p:last-child {
+  max-width: 520px;
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 20px;
+}
+
+.service-accordion article {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) 34px;
+  gap: 24px;
+  padding: 34px 0 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.service-accordion span {
+  color: var(--cyan);
+  font-weight: 900;
+}
+
+.service-accordion h3 {
+  margin: 0;
+  font-size: clamp(28px, 2.3vw, 40px);
+  line-height: 1.1;
+}
+
+.service-accordion p {
+  max-width: 850px;
+  margin: 42px 0 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 21px;
+}
+
+.service-accordion button {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--red);
+  font: inherit;
+  font-size: 30px;
+  line-height: 1;
+}
+
+@media (max-width: 1000px) {
+  .services-section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .service-accordion article {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-accordion button {
+    justify-self: start;
+  }
+}

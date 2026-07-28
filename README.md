@@ -10,7 +10,7 @@ This folder is a cleaned, runnable version of the supplied HTTrack download.
 
 ```bash
 npm install
-npm start
+npm run dev
 ```
 
 Open `http://localhost:3000`.
@@ -37,7 +37,17 @@ dsr-clean/
 |   |   |-- Hero.jsx
 |   |   `-- Products.jsx
 |   `-- styles/
-|       `-- main.css
+|       |-- base.css
+|       |-- main.css
+|       `-- components/
+|           |-- about.css
+|           |-- capabilities.css
+|           |-- contact.css
+|           |-- footer.css
+|           |-- header.css
+|           |-- hero.css
+|           |-- products.css
+|           `-- services.css
 `-- static/
     |-- css/
     |   `-- styles.css
@@ -49,9 +59,11 @@ dsr-clean/
 ## Important limitation
 
 The supplied archive was an offline website mirror, not the original source
-repository. The editable browser modules now live in `src/` as `.jsx` files.
-They use plain JavaScript template strings so the site can run directly in the
-browser without a build step. `serve.json` makes the local server send `.jsx`
+repository. The browser entry is `src/app.jsx`, and the editable components live
+in `src/components/` as `.jsx` files. They use plain JavaScript template strings
+so the site can run directly in the browser without a build step. Styles are
+split by section in `src/styles/components/`, while `src/styles/main.css`
+imports them in page order. `serve.json` makes the local server send `.jsx`
 modules with a JavaScript content type.
 
 This cleaned package removes HTTrack indexes, cache files, Cloudflare challenge

@@ -1,0 +1,147 @@
+:root {
+  color-scheme: light;
+  --container: 1670px;
+  --gutter: clamp(24px, 6.2vw, 120px);
+  --section-y: clamp(80px, 7vw, 132px);
+  --ink: #07101f;
+  --muted: #667085;
+  --navy: #071429;
+  --blue: #1f4199;
+  --cyan: #14b7f0;
+  --red: #cf202b;
+  --line: #e4e8ef;
+  --paper: #ffffff;
+  --grid: #edf1f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-shell {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.section-inner {
+  width: min(var(--container), calc(100% - (var(--gutter) * 2)));
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 44px;
+  color: var(--cyan);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.eyebrow span {
+  width: 60px;
+  height: 2px;
+  background: var(--red);
+}
+
+.eyebrow.dark {
+  color: var(--blue);
+}
+
+.hero h1,
+.about-intro h2,
+.products-heading h2,
+.capabilities-copy h2,
+.services-grid h2,
+.contact-copy h2 {
+  margin: 0;
+  max-width: 980px;
+  color: inherit;
+  font-family: Impact, "Arial Black", "Inter", "Segoe UI", Arial, sans-serif;
+  font-size: clamp(56px, 6.25vw, 116px);
+  line-height: 0.98;
+  font-weight: 900;
+  letter-spacing: -0.055em;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 0 34px;
+  border: 1px solid transparent;
+  font-size: 18px;
+  font-weight: 850;
+  letter-spacing: 0;
+  cursor: pointer;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-red {
+  justify-self: end;
+  background: var(--red);
+  color: #fff;
+}
+
+.btn-red:hover {
+  background: #b91622;
+}
+
+.btn-ghost {
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #fff;
+}
+
+.btn-ghost:hover {
+  border-color: rgba(255, 255, 255, 0.58);
+}
+
+@media (max-width: 680px) {
+  .section-inner {
+    width: min(var(--container), calc(100% - 32px));
+  }
+
+  .btn {
+    min-height: 48px;
+    padding: 0 18px;
+    font-size: 15px;
+  }
+
+  .eyebrow {
+    gap: 12px;
+    margin-bottom: 28px;
+    font-size: 11px;
+    letter-spacing: 5px;
+  }
+
+  .eyebrow span {
+    width: 38px;
+  }
+}

@@ -1,16 +1,16 @@
 export default function Contact() {
-  return `
-    <section id="contact" class="contact-section">
-      <div class="section-inner contact-grid">
-        <div class="contact-copy">
-          <p class="eyebrow dark"><span></span> Get In Touch</p>
+  return (
+    <section id="contact" className="contact-section">
+      <div className="section-inner contact-grid">
+        <div className="contact-copy">
+          <p className="eyebrow dark"><span></span> Get In Touch</p>
           <h2>Let's discuss your molecule.</h2>
           <p>
             Send us your specifications, quantities and timelines. Our chemistry
             team responds to every enquiry personally.
           </p>
 
-          <div class="contact-methods">
+          <div className="contact-methods">
             <a href="tel:+919144686868">
               <span aria-hidden="true">&#9742;</span>
               <small>Phone</small>
@@ -32,7 +32,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <form class="contact-form">
+        <form className="contact-form">
           <label>
             <span>Full Name *</span>
             <input type="text" name="name" placeholder="Jane Doe" />
@@ -49,7 +49,7 @@ export default function Contact() {
             <span>Company</span>
             <input type="text" name="company" placeholder="Company / Institute" />
           </label>
-          <label class="is-wide">
+          <label className="is-wide">
             <span>Area Of Interest</span>
             <select name="interest">
               <option>Select a service</option>
@@ -59,13 +59,13 @@ export default function Contact() {
               <option>Contract R&D</option>
             </select>
           </label>
-          <label class="is-wide">
+          <label className="is-wide">
             <span>Message *</span>
             <textarea name="message" placeholder="Tell us about the compound, quantity and timeline..."></textarea>
           </label>
-          <button class="btn btn-red" type="submit">Send Enquiry <span aria-hidden="true">&#10148;</span></button>
+          <button className="btn btn-red" type="submit">Send Enquiry <span aria-hidden="true">&#10148;</span></button>
         </form>
       </div>
     </section>
-  `;
+  );
 }

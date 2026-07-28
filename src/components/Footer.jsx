@@ -1,11 +1,11 @@
 export default function Footer() {
   const year = new Date().getFullYear();
 
-  return `
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <div class="footer-top">
-          <div class="footer-brand">
+  return (
+    <footer className="site-footer">
+      <div className="footer-inner">
+        <div className="footer-top">
+          <div className="footer-brand">
             <img src="./favicon.png" alt="DSR Pharmachem" />
             <p>
               DSR Pharmachem Private Limited - a research-driven manufacturer of
@@ -14,7 +14,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <nav class="footer-nav" aria-label="Footer navigation">
+          <nav className="footer-nav" aria-label="Footer navigation">
             <h2>Navigate</h2>
             <a href="#about">About</a>
             <a href="#products">Products</a>
@@ -23,10 +23,10 @@ export default function Footer() {
             <a href="#contact">Contact</a>
           </nav>
 
-          <div class="footer-contact">
+          <div className="footer-contact">
             <h2>Contact</h2>
             <a href="tel:+919144686868">+91 9144 68 68 68</a>
-            <a href="mailto:info@dsrpharmachem.com">info@dsrpharmachem.com <span aria-hidden="true">&nearr;</span></a>
+            <a href="mailto:info@dsrpharmachem.com">info@dsrpharmachem.com <span aria-hidden="true">↗</span></a>
             <p>
               P.No. 30/C, Sy. No. 83/1, Orbit By Auro Realty,<br />
               Tower 1, 1st Floor, Opposite T-HUB, Hitech<br />
@@ -35,12 +35,12 @@ export default function Footer() {
           </div>
         </div>
 
-        <div class="footer-bottom">
-          <p>&copy; ${year} DSR Pharmachem Private Limited. All rights reserved.</p>
+        <div className="footer-bottom">
+          <p>&copy; {year} DSR Pharmachem Private Limited. All rights reserved.</p>
           <p>Hyderabad&nbsp;&nbsp;-&nbsp;&nbsp;Telangana&nbsp;&nbsp;-&nbsp;&nbsp;India</p>
         </div>
       </div>
-      <div class="footer-watermark" aria-hidden="true">DSR PHARM</div>
+      <div className="footer-watermark" aria-hidden="true">DSR PHARM</div>
     </footer>
-  `;
+  );
 }

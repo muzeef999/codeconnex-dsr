@@ -14,45 +14,47 @@ const points = [
 ];
 
 export default function About() {
-  return `
-    <section id="about" class="about-section">
-      <div class="marquee" aria-hidden="true">
-        <div>
-          <span>Building Blocks</span><b>&diams;</b><span>Custom Synthesis</span><b>&diams;</b>
-          <span>Process R&D</span><b>&diams;</b><span>Medicinal Chemistry</span><b>&diams;</b>
-          <span>Contract R&D</span><b>&diams;</b>
+  return (
+    <section id="about" className="about-section">
+      <div className="marquee" aria-hidden="true">
+        <div className="marquee-track">
+          {Array.from({ length: 2 }).map((_, groupIndex) => (
+            <div className="marquee-group" key={groupIndex}>
+              <span>Building Blocks</span><b>♦</b>
+              <span>Custom Synthesis</span><b>♦</b>
+              <span>Process R&D</span><b>♦</b>
+              <span>Medicinal Chemistry</span><b>♦</b>
+              <span>Contract R&D</span><b>♦</b>
+            </div>
+          ))}
         </div>
       </div>
 
-      <div class="section-inner about-intro">
-        <p class="eyebrow dark"><span></span> Who We Are</p>
+      <div className="section-inner about-intro">
+        <p className="eyebrow dark"><span></span> Who We Are</p>
         <h2>An R&D house for the molecules medicine is built on.</h2>
       </div>
 
-      <div class="section-inner about-grid">
-        <div class="about-list">
-          ${points
-            .map(
-              (point, index) => `
-                <article class="about-point">
-                  <strong>${String(index + 1).padStart(2, '0')}</strong>
-                  <div>
-                    <h3>${point.title}</h3>
-                    <p>${point.text}</p>
-                  </div>
-                </article>
-              `,
-            )
-            .join('')}
+      <div className="section-inner about-grid">
+        <div className="about-list">
+          {points.map((point, index) => (
+            <article className="about-point" key={point.title}>
+              <strong>{String(index + 1).padStart(2, '0')}</strong>
+              <div>
+                <h3>{point.title}</h3>
+                <p>{point.text}</p>
+              </div>
+            </article>
+          ))}
         </div>
-        <aside class="lab-card">
-          <div class="lab-photo" aria-hidden="true"></div>
-          <div class="location-card">
+        <aside className="lab-card">
+          <div className="lab-photo" aria-hidden="true"></div>
+          <div className="location-card">
             <span>Located At</span>
             <strong>Hyderabad - Opposite T-HUB</strong>
           </div>
         </aside>
       </div>
     </section>
-  `;
+  );
 }

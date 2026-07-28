@@ -1,0 +1,169 @@
+.marquee {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #eaf2ff;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: marquee-scroll 24s linear infinite;
+}
+
+.marquee-group {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  padding: 32px 24px;
+  color: var(--blue);
+  font-size: clamp(30px, 2.6vw, 48px);
+  line-height: 1;
+  font-family: Impact, "Arial Black", "Inter", Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+}
+
+.marquee b {
+  color: var(--red);
+  font-size: 32px;
+  font-family: inherit;
+  transform: translateY(-1px);
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.about-section {
+  background: #fff;
+}
+
+.about-intro {
+  padding: clamp(96px, 8.5vw, 164px) 0 clamp(58px, 4vw, 76px);
+}
+
+.about-intro h2 {
+  max-width: 920px;
+  font-size: clamp(48px, 4.2vw, 76px);
+  letter-spacing: -0.065em;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(420px, 0.82fr);
+  gap: 60px;
+  align-items: start;
+  padding-bottom: var(--section-y);
+}
+
+.about-point {
+  display: grid;
+  grid-template-columns: 74px 1fr;
+  gap: 24px;
+  padding: 40px 0 48px;
+  border-top: 1px solid var(--line);
+}
+
+.about-point strong {
+  color: var(--red);
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 950;
+}
+
+.about-point h3 {
+  margin: 0 0 16px;
+  font-size: clamp(28px, 2.5vw, 40px);
+  line-height: 1.12;
+  font-weight: 920;
+}
+
+.about-point p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.lab-card {
+  position: sticky;
+  top: 116px;
+}
+
+.lab-photo {
+  height: 650px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.1)),
+    radial-gradient(circle at 66% 56%, rgba(255, 255, 255, 0.96) 0 7%, transparent 8%),
+    radial-gradient(circle at 52% 64%, rgba(30, 30, 30, 0.16) 0 16%, transparent 17%),
+    linear-gradient(135deg, #f4f4f4, #b9bdc3 46%, #eeeeee);
+  filter: grayscale(1);
+}
+
+.location-card {
+  margin-top: 30px;
+  padding: 42px;
+  background: var(--blue);
+  color: #fff;
+}
+
+.location-card span {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+
+.location-card strong {
+  font-size: 28px;
+}
+
+@media (max-width: 1000px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro {
+    padding-top: 96px;
+  }
+
+  .about-grid {
+    padding-bottom: 96px;
+  }
+
+  .lab-card {
+    position: static;
+  }
+}
+
+@media (max-width: 680px) {
+  .about-point {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .about-point p {
+    font-size: 17px;
+  }
+
+  .lab-photo {
+    height: 390px;
+  }
+
+  .marquee div {
+    gap: 28px;
+    font-size: 32px;
+  }
+}
